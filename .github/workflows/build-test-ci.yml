@@ -2,10 +2,6 @@ name: Build Test CI
 
 on:
   pull_request:
-    branches: ["dev", "main"]
-    paths:
-      - "FE/**"
-      - "BE/**"
 
 jobs:
   FE_lint:
