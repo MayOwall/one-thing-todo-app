@@ -9,7 +9,7 @@ on:
 
 jobs:
   FE_lint:
-    name: "FE Lint Test"
+    name: FE Lint Test
     defaults:
       run:
         shell: bash
@@ -34,7 +34,7 @@ jobs:
         run: npm run lint
 
   FE_build:
-    name: "FE Build Test"
+    name: FE Build Test
     defaults:
       run:
         shell: bash
@@ -59,7 +59,7 @@ jobs:
         run: npm run build
 
   BE_lint:
-    name: "BE Lint Test"
+    name: BE Lint Test
     defaults:
       run:
         shell: bash
@@ -84,7 +84,7 @@ jobs:
         run: npm run lint
 
   BE_build:
-    name: "BE Build Test"
+    name: BE Build Test
     defaults:
       run:
         shell: bash
