@@ -20,7 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
@@ -41,18 +41,14 @@ jobs:
         working-directory: ./FE
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup node ${{ matrix.node-version }}
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
           cache-dependency-path: "./FE"
 
@@ -67,7 +63,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./FE
+        working-directory: ./BE
     runs-on: ubuntu-latest
 
     steps:
@@ -95,18 +91,14 @@ jobs:
         working-directory: ./BE
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup node ${{ matrix.node-version }}
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: "npm"
           cache-dependency-path: "./BE"
 
